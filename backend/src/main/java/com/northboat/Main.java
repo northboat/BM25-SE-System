@@ -156,7 +156,6 @@ public class Main {
         } else {
             System.out.println("身份认证失败");
         }
-
         System.out.println("=======================\n");
     }
 
@@ -411,7 +410,7 @@ public class Main {
 
         long stopTime = fromDateStringToLong(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS").format(new Date()));
         long timeSpan = stopTime - startTime;
-        System.out.println(timeSpan + "ms");
+        System.out.println("搜索耗时: " + timeSpan + "ms");
         //计算时间差,单位毫秒
 //        JPBCTest();
 
