@@ -1,3 +1,35 @@
+# BM25-SE-System
+
+## 环境及目录说明
+
+### 环境
+
+操作系统：Win10
+
+JDK：17
+
+JPBC：2.0.0
+
+Maven：3.91
+
+### 目录
+
+根目录结构
+
+- `lib`：外部引入的 JPBC 库
+- `src`：源代码
+- `target`：构建的目标文件
+- `a.properties`：JPBC 的参数文件
+- `pom.xml`：Maven 的配置文件
+
+`src/main/java/com/northboat`
+
+- `Main.java`：运行主类，由于没有其他需求，我将 JPBC 相关的代码直接写在主类里，如果要构建完整系统，需要把这一块代码提出来重构
+- `pojo`：一些结构体，比如密钥对
+- `util`：一些工具类，如 IO 工具、比特流工具、AES 加密、VFE-Plus 加密
+
+`src/main/recources`：存放用于测试的文档（邮件），系统将提取该目录下文档内容的关键字去生成加密索引，查询结果为文档名
+
 ## JPBC 基础
 
 外部 jar 包导入`jpbc-api-2.0.0.jar`以及`jpbc-plaf-2.0.0.jar`，在项目根目录下导入群参数配置`a.properties`
@@ -5,6 +37,7 @@
 ### 双线性验证
 
 验证公式
+
 $$
 e(u^a, v^b)=e(u, v)^{ab}
 $$
